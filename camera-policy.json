@@ -1,0 +1,26 @@
+{
+    "policyId": "org.eclipse.ditto:cameradetection_varroa",
+    "entries": {
+      "owner": {
+        "subjects": {
+          "nginx:ditto": {
+            "type": "admin aissam"
+          }
+        },
+        "resources": {
+          "thing:/": {
+            "grant": ["READ", "WRITE"],
+            "revoke": []
+          },
+          "policy:/": {
+            "grant": ["READ", "WRITE"],
+            "revoke": []
+          },
+          "message:/": {
+            "grant": ["READ", "WRITE"],
+            "revoke": []
+          }
+        }
+      }
+    }
+}

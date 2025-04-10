@@ -1,0 +1,50 @@
+{
+    "id": "547da4ce-b183-4296-a8db-2ca10dbb7d61",
+    "name": "Camera MQTT Connection",
+    "connectionType": "mqtt",
+    "connectionStatus": "open",
+    "uri": "tcp://localhost:1883",
+    "sources": [
+      {
+        "addresses": [
+          "varroa/camera/status"
+        ],
+        "consumerCount": 1,
+        "qos": 0,
+        "authorizationContext": [
+          "nginx:ditto"
+        ],
+        "headerMapping": {},
+        "replyTarget": {
+          "address": "{{header:reply-to}}",
+          "headerMapping": {},
+          "expectedResponseTypes": [
+            "response",
+            "error"
+          ],
+          "enabled": true
+        }
+      }
+    ],
+    "targets": [
+      {
+        "address": "varroa/camera/response",
+        "topics": [
+          "_/_/things/live/messages"
+        ],
+        "qos": 0,
+        "authorizationContext": [
+          "nginx:ditto"
+        ],
+        "headerMapping": {}
+      }
+    ],
+    "clientCount": 1,
+    "failoverEnabled": true,
+    "validateCertificates": true,
+    "processorPoolSize": 1,
+    "specificConfig": {
+      "clientId": "camera-ditto-conn"
+    },
+    "tags": []
+  }

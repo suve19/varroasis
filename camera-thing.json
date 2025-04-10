@@ -1,0 +1,43 @@
+{
+  "thingId": "org.eclipse.ditto:camera_digitaltwin",
+  "policyId": "org.eclipse.ditto:cameradetection_varroa",
+  "attributes": {
+    "model": "BeeDetectorCamX100",
+    "location": "Hive #3, North Field",
+    "manufacturer": "BeeVision Inc."
+  },
+  "features": {
+    "beeMonitoring": {
+      "properties": {
+        "totalBeeCount": 1000,
+        "affectedBeeCount": 150,
+        "unaffectedBeeCount": 850
+      }
+    },
+    "deviceHealth": {
+      "properties": {
+        "lastReboot": "2025-03-20T14:00:00Z",
+        "batteryPercentage": 85,
+        "cpuUsage": 43,
+        "temperature": 38,
+        "signalStrength": -65
+      }
+    },
+    "cameraSpecs": {
+      "properties": {
+        "resolution": "1920x1080",
+        "frameRate": 30,
+        "focusMode": "Auto",
+        "zoomLevel": 2,
+        "nightVisionEnabled": true
+      }
+    },
+    "environmentalConditions": {
+      "properties": {
+        "ambientTemperature": 25,
+        "humidity": 60,
+        "lightIntensity": 500
+      }
+    }
+  }
+}
